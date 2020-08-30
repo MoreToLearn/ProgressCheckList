@@ -20,7 +20,7 @@ const settings = [{
     }
 ]
 settings.forEach(x => {
-    const extracted = process.env[x.name];
+    const extracted = process.env[x.name.toUpperCase()];
     if (!extracted && x.required) throw new Error(`The setting ${x.name} was not found. ${x.description ? x.description : ""}`);
     Config[x.name] = extracted || x.default
 })
