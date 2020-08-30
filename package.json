@@ -1,0 +1,43 @@
+{
+  "name": "progresschecklist",
+  "version": "1.0.0",
+  "description": "A reminder and progress platform for MoreToLearn",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test::build": "tsc --watch",
+    "test::watch": "nodemon --exec ts-node -- ./src/index.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoreToLearn/ProgressCheckList.git"
+  },
+  "author": "Zaid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MoreToLearn/ProgressCheckList/issues"
+  },
+  "homepage": "https://github.com/MoreToLearn/ProgressCheckList#readme",
+  "devDependencies": {
+    "@types/better-sqlite3": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.1.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.1.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nanoid": "^3.1.12",
+    "node-fetch": "^2.6.0",
+    "pug": "^3.0.0"
+  }
+}

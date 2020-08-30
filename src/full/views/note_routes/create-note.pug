@@ -1,0 +1,18 @@
+extends ../base/base.pug
+
+block content
+    .container.h-100
+        .row.h-100
+            .col-lg-7.offset-xl-3.my-auto
+                .w3-container
+                    form(method="POST" action="/lists/" + id + "/notes").w3-container
+                        p
+                            label Your Name
+                            input.w3-input(name='owner' type='text')
+                        p
+                            label Note Name
+                            input.w3-input(name='name' type='text')
+                        p
+                            label Description
+                            input.w3-input(name='description' type='text')
+                        button(type="submit").w3-btn.w3-blue-grey Create

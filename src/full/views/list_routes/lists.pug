@@ -1,0 +1,21 @@
+extends ../base/base.pug
+
+block heading
+    a(href="/lists/create")
+        h1(style='color: rgb(44,118,192);') Create List
+
+block content
+    .container
+        br
+        br
+        .row.h-100
+            .col-lg-7.offset-xl-3.my-auto
+                .w3-container
+                    each list in lists
+                        .w3-card-4(style='width:100%;')
+                            a(href="/lists/" + list.id)
+                                header.w3-container.w3-blue
+                                    h1 #{list.name}
+                            footer.w3-container.w3-black
+                                h5.w3-text-light-grey.w3-opacity.w3-medium Created on: #{list.date_created} &bull; Owner: #{list.owner}
+                        br

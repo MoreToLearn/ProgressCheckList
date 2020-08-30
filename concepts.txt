@@ -1,0 +1,3 @@
+List - ID, name, date_created, owner
+Note - ID, List ID, name, date_created, owner
+Reminder - ID, Note ID, name, description, date_to_execute, date_created

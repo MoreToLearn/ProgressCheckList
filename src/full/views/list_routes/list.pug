@@ -1,0 +1,38 @@
+extends ../base/base.pug
+
+block heading
+    a(href="/lists/" + id + "/create")
+        h1(style='color: rgb(44,118,192);') Create Note
+
+block content
+    .container
+        br
+        br
+        .row.h-100
+            .col-lg-7.offset-xl-3.my-auto
+                .w3-container(style="height: 100%")
+                    if(list.length > 0)
+                        each note in list
+                            .w3-card-4.w3-mobile(style='width:100%;')
+                                a(href="/notes/" + note.id)
+                                    if(note.status === "done")
+                                        header.w3-container.w3-green
+                                            h1 Note Name: #{note.name}
+                                    else if(note.status === "in_progress")
+                                        header.w3-container.w3-yellow
+                                            h1 Note Name: #{note.name}
+                                    else 
+                                        header.w3-container.w3-red
+                                            h1 Note Name: #{note.name}
+                                    .w3-container.w3-white
+                                        br
+                                        p #{note.description}
+                                    footer.w3-container.w3-black
+                                        h5.w3-text-light-grey.w3-opacity.w3-medium Created on: #{note.date_created} &bull; Owner: #{note.owner}
+                            br
+                    else 
+                        .w3-container
+                            .w3-card-4(style="width: 100%")
+                                header.w3-container.w3-red 
+                                    a(href="/lists/" + id + "/create")
+                                        h1 Add Notes to this List

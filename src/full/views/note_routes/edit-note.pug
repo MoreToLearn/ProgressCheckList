@@ -1,0 +1,20 @@
+extends ../base/base.pug
+
+block content
+    .container.h-100
+        .row.h-100
+            .col-lg-7.offset-xl-3.my-auto
+                .w3-container
+                    form(method="POST" action="/notes/" + id + "/edit").w3-container
+                        .w3-card-4(style='width:100%;' class="w3-white")
+                            p(style="padding: 15%")
+                                input.w3-radio(type='radio' name='status' value='done' checked='')
+                                label Done
+                                br
+                                input.w3-radio(type='radio' name='status' value='in_progress')
+                                label In Progress
+                                br
+                                input.w3-radio(type='radio' name='status' value='not_done' disabled='')
+                                label Not Done
+                                br
+                                button(type="submit").w3-btn.w3-blue-grey edit

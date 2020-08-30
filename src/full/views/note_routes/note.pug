@@ -1,0 +1,32 @@
+extends ../base/base.pug
+
+block content
+    .container.h-100
+        .row.h-100
+            .col-lg-7.offset-xl-3.my-auto
+                .w3-container
+                    if(note.error)
+                        .w3-container
+                            .w3-card-4(style="width: 100%")
+                                header.w3-container.w3-red 
+                                    h1 Note Not Found
+                                    hr
+                                    a(onclick="window.history.back()")
+                                        h5 Click here to Go Back
+                    else
+                        a(href="/notes/" + id + "/edit")
+                            .w3-card-4(style='width:100%;')
+                                if(note.status === "done")
+                                    header.w3-container.w3-green
+                                        h1 Note Name: #{note.name}
+                                else if(note.status === "in_progress")
+                                    header.w3-container.w3-yellow
+                                        h1 Note Name: #{note.name}
+                                else 
+                                    header.w3-container.w3-red
+                                        h1 Note Name: #{note.name}
+                                .w3-container.w3-white
+                                    br
+                                    p #{note.description}
+                                footer.w3-container.w3-black
+                                    h5.w3-text-light-grey.w3-opacity.w3-medium Created on: #{note.date_created} &bull; Owner: #{note.owner}

@@ -1,0 +1,16 @@
+extends ../base/base.pug
+
+block content 
+    .container.h-100
+        .row.h-100
+            .col-lg-7.offset-xl-3.my-auto
+                .w3-container
+                    h1 Create A List
+                    form(method="POST" action="/lists").w3-container
+                        p
+                            label Your Name
+                            input.w3-input(name='owner' type='text')
+                        p
+                            label List Name
+                            input.w3-input(name='name' type='text')
+                        button(type="submit").w3-btn.w3-blue-grey Create
