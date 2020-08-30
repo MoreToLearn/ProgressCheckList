@@ -1,5 +1,7 @@
 const dotenv = require("dotenv");
-dotenv.config();
+dotenv.config({
+    path: `${__dirname}/.env`
+});
 let Config = {};
 const settings = [{
         "name": "domain",
