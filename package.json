@@ -5,8 +5,9 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "test::build": "tsc --watch",
+    "lint": "npx eslint --fix",
     "test::watch": "nodemon --exec ts-node -- ./src/index.ts",
-    "build": "tsc"
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",

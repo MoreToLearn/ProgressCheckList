@@ -27,6 +27,6 @@
         "src/**/*"
     ],
     "files": [
-        "config.json",
+        "config.js",
     ]
 }
