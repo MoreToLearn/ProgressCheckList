@@ -2,3 +2,6 @@ tests/
 node_modules/
 dist/
 config.js
+assets/**
+public/**
+views/**
